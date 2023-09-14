@@ -14,7 +14,7 @@ steps:
 - script: trunk build
   displayName: 'Construyendo el proyecto con Trunk'
 
-- script: npm install -g gh-pages
+- script: sudo npm install -g gh-pages
   displayName: 'Instalando gh-pages'
 
 - script: gh-pages -d dist
