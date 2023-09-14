@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: Default
 steps:
   - script: |
       curl https://sh.rustup.rs -sSf | sh -s -- -y
