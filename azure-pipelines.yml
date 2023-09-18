@@ -39,11 +39,12 @@ steps:
 
 
 - script: |
-    git config user.name "Jonathan Larios"
-    git config user.email "jonathan@linearosa.app"
-    git checkout gh-pages || git checkout -b gh-pages
-    cp -r dist/* .
-    git add .
-    git commit -m "Deploy to GitHub Pages"
-    git push -f origin gh-pages
+   git stash
+   git checkout gh-pages || git checkout -b gh-pages
+   git stash pop
+   git remote set-url origin git@github.com:JonaL10/azure_devops_test.git
+   cp -r dist/* .
+   git add .
+   git commit -m "Deploy to github pages"
+   git push -f origin gh-pages
   displayName: 'Deploy to GitHub Pages'
