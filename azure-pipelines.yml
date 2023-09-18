@@ -4,7 +4,7 @@ variables:
   - name: sshPublicKey
     value: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQClPTP3F1Z6logh4TP9TGiIINMBYZmWlm0XJgl4CP4+jDBSkmrI8dil7p8na1pWFhoOF5m71v9XX8BffWDBVspJzDpa6fguLNtJIcQp5gIXLtHgj3zSU/AmkJpZ1/2hui2mM61auGn4KRCaNGptl+YNS0uTvemixyjD7KrXV/2sWXYlbBUssmVfOec4lZPsSrc/6vNRuK1XbO2pY/2wGsTD/KUTmpww6VMnjNsUT0mSJMJW90pQehzzGn1fWDw4Qx9fIZMce2wVlvkOU8sbPA7jhrduJWByhWqmY/L4DNeCuAQksNVgwN6VFqsJg2Xf6m233td+zChjbU+lMpyZLEU9d8l0yq6IZG0QPwQNmiGcZPpfoqYRUD5ZSOjFjJtai+AiU5yirM66cunk4JTZlMd9bVHbX6q2+4PMAMorxlxivd6TTR41I8RCwz7YPVaFxJXgNmbpDBB01lqJYDY1YLtJNKzoXInWW/V9KQWzvwb1zuLgsA7png3qLmlmHZnrJjntUVcNejsUH1DCDnhrf0t/iMd2i0SwWajPKxjNUm4L9l1qfuOO6lgT7vygXi9yyLLxp9DJUbj3OXqm0HzScoD5yWOyWxUFGRMajBqD6XxbQaSdiPaUevhyWSgusOludyxEI6wUUX/vUZ5r4x1XIDysXBPck/YepK5hhn2W+RSOzQ== jonathan@linearosa.app'
   - name: sshKeySecureFile
-    value: 'my-ssh-private-key'
+    value: 'id_rsa'
 
 trigger:
   branches:
@@ -15,7 +15,15 @@ trigger:
 pool:
   name: Default
 
+
+
 steps:
+- task: InstallSSHKey@0
+  inputs:
+    knownHostsEntry: '$(knownHostsEntry)'
+    sshPublicKey: '$(sshPublicKey)'
+    sshKeySecureFile: '$(sshKeySecureFile)'
+
 - script: |
     curl https://sh.rustup.rs -sSf | sh -s -- -y
     source $HOME/.cargo/env
