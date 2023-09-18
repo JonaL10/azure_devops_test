@@ -13,15 +13,14 @@ steps:
     source $HOME/.cargo/env
     rustup default stable
     rustup update
-    cargo install wasm-pack
-  displayName: 'Install Rust and wasm-pack'
+    cargo install trunk
+  displayName: 'Install Rust and trunk'
 
 - script: |
     source $HOME/.cargo/env
-    wasm-pack build --target web
-    mkdir dist
-    cp -r pkg/* dist/
-  displayName: 'Build the project and move files to dist folder'
+    trunk build --release
+  displayName: 'Build the project with trunk'
+
 
 - script: |
     git config user.name "Jonathan Larios"
