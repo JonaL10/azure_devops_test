@@ -6,16 +6,29 @@ trigger:
 
 pool:
   name: Default
-  
+
 steps:
-- script: echo "Iniciando el pipeline..."
-  displayName: 'Inicio'
+- script: |
+    curl https://sh.rustup.rs -sSf | sh -s -- -y
+    source $HOME/.cargo/env
+    rustup default stable
+    rustup update
+    cargo install wasm-pack
+  displayName: 'Install Rust and wasm-pack'
 
-- script: trunk build
-  displayName: 'Construyendo el proyecto con Trunk'
+- script: |
+    source $HOME/.cargo/env
+    wasm-pack build --target web
+    mkdir dist
+    cp -r pkg/* dist/
+  displayName: 'Build the project and move files to dist folder'
 
-- script: sudo npm install -g gh-pages
-  displayName: 'Instalando gh-pages'
-
-- script: gh-pages -d dist
-  displayName: 'Desplegando en GitHub Pages'
+- script: |
+    git config user.name "Jonathan Larios"
+    git config user.email "jonathan@linearosa.app"
+    git checkout -b gh-pages
+    cp -r dist/* .
+    git add .
+    git commit -m "Deploy to GitHub Pages"
+    git push -f origin gh-pages
+  displayName: 'Deploy to GitHub Pages'
