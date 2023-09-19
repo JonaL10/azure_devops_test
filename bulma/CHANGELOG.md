@@ -1339,7 +1339,7 @@ Variable name changes (mostly appending `-color`):
 - Use `rem` and `em` (!)
 - Fix Font Awesome icons in buttons (!)
 - Fix message colors (!)
-- Use `{% capture %}` to ensure same display as code snippet (!)
+- Use `{{ "{% capture %}" }}` to ensure same display as code snippet (!)
 
 - Move variables to their own file
 - Remove small tag

@@ -1,0 +1,25 @@
+
+.contenedor::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;; /* Ancho de la barra de desplazamiento */
+  }
+  
+
+  
+::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
+    border-radius: 6px; /* Color de la barra de desplazamiento */
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #aeaeae; /* Color de la barra de desplazamiento al pasar el ratón */
+  }
+  
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: 6px;
+    scrollbar-color: #a8a8a8 ;
+}
