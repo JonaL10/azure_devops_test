@@ -42,7 +42,6 @@ steps:
    git stash
    git checkout gh-pages || git checkout --orphan gh-pages
    git rm -rf .
-   git clean -fxd
    git stash pop
    cp -r dist/* .
    git add .
