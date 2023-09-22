@@ -34,11 +34,12 @@ impl Component for CoreView {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-           <div class="is-flex is-justify-content-center is-align-items-center contenedor">
+            <>
+            <button class="button is-dark" onclick={ctx.link().callback(|_| Message::GoToSide)}>
+                {"Go to side screen"}
+            </button>
+            <div class="is-flex is-justify-content-center is-align-items-center contenedor">
                 <div class="columns ">
-                    // <button class="column button is-dark" onclick={ctx.link().callback(|_| Message::GoToSide)}>
-                    //     {"Go to side screen"}
-                    // </button>
                     <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
                     <div class="column has-text-black has-background-white p-3" style="border-radius: 8px;">{"Column"}</div>
                     <div class="column has-text-white has-background-link p-3" style="border-radius: 8px;">{"Column"}</div>
@@ -80,7 +81,8 @@ impl Component for CoreView {
                     <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
                 </div>
             
-            </div>
+                </div>
+            </>
         }
     }
 }
