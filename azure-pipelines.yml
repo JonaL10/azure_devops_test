@@ -34,7 +34,7 @@ steps:
 
 - script: |
     source $HOME/.cargo/env
-    trunk build --release
+    trunk build --release --public-url /azure_devops_test
   displayName: 'Build the project with trunk'
 
 
