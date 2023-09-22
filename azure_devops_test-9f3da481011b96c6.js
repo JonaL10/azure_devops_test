@@ -584,12 +584,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper331 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 129, __wbg_adapter_16);
+    imports.wbg.__wbindgen_closure_wrapper334 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 132, __wbg_adapter_16);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper519 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 210, __wbg_adapter_19);
+    imports.wbg.__wbindgen_closure_wrapper522 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 213, __wbg_adapter_19);
         return addHeapObject(ret);
     };
 
@@ -631,7 +631,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('azure_devops_test-63191cca969de57d_bg.wasm', import.meta.url);
+        input = new URL('azure_devops_test-9f3da481011b96c6_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
