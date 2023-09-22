@@ -37,16 +37,17 @@ steps:
     trunk build --release --public-url /azure_devops_test
   displayName: 'Build the project with trunk'
 
-
 - script: |
    git stash
    git checkout gh-pages || git checkout --orphan gh-pages
    git rm -rf .
    git stash pop
    cp -r dist/* .
+   rm -rf dist target
    git add .
    git commit -m "Deploy to GitHub Pages" --allow-empty
    git remote set-url origin git@github.com:JonaL10/azure_devops_test.git
    git push -f origin gh-pages
   displayName: 'Deploy to GitHub Pages'
+
 
