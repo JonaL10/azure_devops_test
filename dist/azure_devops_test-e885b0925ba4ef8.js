@@ -636,7 +636,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('azure_devops_test-ead6570cd623493f_bg.wasm', import.meta.url);
+        input = new URL('azure_devops_test-e885b0925ba4ef8_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

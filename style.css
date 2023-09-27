@@ -19,8 +19,8 @@
 
 .contenedor{
     width: 100%;
-    height: 100vh;
-    /* overflow-y: scroll !important; */
+    height: 90vh;
+    overflow-y: scroll !important;
     /* -webkit-overflow-scrolling: touch !important;
     scrollbar-width: 6px;
     scrollbar-color: #a8a8a8 ; */
@@ -32,21 +32,28 @@
 }
 
 #wrapper-ios{
+  width: 100%;
+  height: 90vh;
+  /* overflow-y: scroll !important; */
+}
+
+
+.wrapper-child{
+  width: 300px !important;
+  height: 500px !important;
   overflow-y: scroll !important;
-  width: 300px;
-  height: 500px;
 }
 
 /* Cambiar el color de la barra de scroll */
-#wrapper-ios::-webkit-scrollbar {
+.wrapper-child::-webkit-scrollbar {
   width: 10px; /* Ancho de la barra de scroll */
   background-color: #f1f1f1; /* Color de fondo de la barra de scroll */
 }
 /* Cambiar el color del pulgar de la barra de scroll */
-#wrapper-ios::-webkit-scrollbar-thumb {
+.wrapper-child::-webkit-scrollbar-thumb {
   background-color: #333; /* Color del pulgar de la barra de scroll */
 }
 /* Cambiar el color del fondo de la barra de scroll cuando se mueve el pulgar */
-#wrapper-ios::-webkit-scrollbar-track {
+.wrapper-child::-webkit-scrollbar-track {
   background-color: #ccc; /* Color de fondo de la barra de scroll cuando se mueve el pulgar */
 }
