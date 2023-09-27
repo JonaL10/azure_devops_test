@@ -588,12 +588,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper3100 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 281, __wbg_adapter_16);
+    imports.wbg.__wbindgen_closure_wrapper3119 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 284, __wbg_adapter_16);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper3298 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 297, __wbg_adapter_19);
+    imports.wbg.__wbindgen_closure_wrapper3317 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 300, __wbg_adapter_19);
         return addHeapObject(ret);
     };
     imports['./snippets/azure_devops_test-5d0817f69df8345a/src/functions.js'] = __wbg_star0;
@@ -636,11 +636,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-<<<<<<<< HEAD:dist/azure_devops_test-6ba9cf643146dd12.js
-        input = new URL('azure_devops_test-6ba9cf643146dd12_bg.wasm', import.meta.url);
-========
-        input = new URL('azure_devops_test-3ced4e1d4f7f06cd_bg.wasm', import.meta.url);
->>>>>>>> c4a26f9 (Adding a js scroll library to test):dist/azure_devops_test-3ced4e1d4f7f06cd.js
+        input = new URL('azure_devops_test-ead6570cd623493f_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

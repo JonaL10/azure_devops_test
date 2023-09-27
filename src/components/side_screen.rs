@@ -34,9 +34,54 @@ impl Component for SideScreen {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <button class="button is-dark" onclick={ctx.link().callback(|_| Message::GoBack)}>
-                {"Go Back"}
-            </button>
+            <>
+                <button class="button is-dark" onclick={ctx.link().callback(|_| Message::GoBack)}>
+                    {"Go Back"}
+                </button>
+                <div id="wrapper-ios" class="is-flex is-justify-content-center is-align-items-center contenedor">
+                    <div  class="columns ">
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-black has-background-white p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-link p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-info p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-success p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-black has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-danger p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-warning p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-black has-background-light p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-light has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-warning has-background-black-bis	 p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                        <div class="column has-text-white has-background-primary p-3" style="border-radius: 8px;">{"Column"}</div>
+                    </div>
+                </div>
+            </>
         }
     }
 
