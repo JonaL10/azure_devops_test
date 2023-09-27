@@ -1,5 +1,6 @@
 use yew::{prelude::*, Properties};
 
+
 use crate::appstate::app_state::AppState;
 use crate::components::
     {core_component::CoreView,
@@ -51,4 +52,5 @@ impl Component for MainComponent {
             }
         }
     }
+
 }
