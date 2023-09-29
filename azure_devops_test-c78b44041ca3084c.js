@@ -1,3 +1,5 @@
+import * as __wbg_star0 from './snippets/azure_devops_test-5d0817f69df8345a/src/functions.js';
+
 let wasm;
 
 const heap = new Array(128).fill(undefined);
@@ -210,14 +212,14 @@ function addBorrowedObject(obj) {
 }
 function __wbg_adapter_16(arg0, arg1, arg2) {
     try {
-        wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h78fb948ef6261a6e(arg0, arg1, addBorrowedObject(arg2));
+        wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h53e097a4a13ca788(arg0, arg1, addBorrowedObject(arg2));
     } finally {
         heap[stack_pointer++] = undefined;
     }
 }
 
 function __wbg_adapter_19(arg0, arg1, arg2) {
-    wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h64fb6892d9afab24(arg0, arg1, addHeapObject(arg2));
+    wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h5f4fad583ec92aaf(arg0, arg1, addHeapObject(arg2));
 }
 
 function isLikeNone(x) {
@@ -585,13 +587,14 @@ function __wbg_get_imports() {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
     imports.wbg.__wbindgen_closure_wrapper334 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 132, __wbg_adapter_16);
+        const ret = makeMutClosure(arg0, arg1, 133, __wbg_adapter_16);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper522 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 213, __wbg_adapter_19);
+    imports.wbg.__wbindgen_closure_wrapper523 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 214, __wbg_adapter_19);
         return addHeapObject(ret);
     };
+    imports['./snippets/azure_devops_test-5d0817f69df8345a/src/functions.js'] = __wbg_star0;
 
     return imports;
 }
@@ -631,7 +634,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('azure_devops_test-9f3da481011b96c6_bg.wasm', import.meta.url);
+        input = new URL('azure_devops_test-c78b44041ca3084c_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
